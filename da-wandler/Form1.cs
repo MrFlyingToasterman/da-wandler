@@ -38,18 +38,34 @@ namespace da_wandler {
 
         public static String tobin(int dec_input) {
             //Convert to Binary
-            String bin_ip = Convert.ToString(dec_input, 2);
+            String bin = Convert.ToString(dec_input, 2);
 
             //Add Zeros
             String filling0s = "";
-            if (bin_ip.Length < 4) {
-                for (int i = 0; i < 8 - bin_ip.Length; i++) {
+            if (bin.Length < 4) {
+                for (int i = 0; i < 4 - bin.Length; i++) {
                     filling0s = filling0s + "0";
                 }
             }
 
             //Convert to Binary
-            return filling0s + bin_ip;
+            return filling0s + bin;
+        }
+
+        private void button1_Click(object sender, EventArgs e) {
+            inbin = eingabe_bin_box.Text;
+        }
+
+        private void button2_Click(object sender, EventArgs e) {
+            invol = eingabe_vol_box.Text;
+            outbin = tobin(Convert.ToInt32(invol));
+            inbin = outbin;
+            einsetzen();
+        }
+
+        private void einsetzen() {
+            ausgabe_bin_box.Text = outbin;
+            ausgabe_vol_box.Text = outvol;
         }
 
 
