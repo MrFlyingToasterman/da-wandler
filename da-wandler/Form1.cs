@@ -31,6 +31,7 @@ namespace da_wandler {
             position++;
         }
 
+
         public Form1() {
             InitializeComponent();
         }
