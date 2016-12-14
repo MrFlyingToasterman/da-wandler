@@ -19,16 +19,34 @@ namespace da_wandler {
         String outvol;
 
         void wertausgabe() {
-            for (int y = 0; y < gArray.GetLength(0); y++) {
-                for (int x = 0; x < gArray.GetLength(1); x++) {
-                    Volt_verlauf.Text = "" + gArray[y,x];
+
+            Volt_verlauf.Text = "";
+
+            for (int y = 0; y < 16; y++) {
+
+                for (int x = 0; x < 16; x++) {
+                    if (gArray[y, x] == '\0') {
+                        Volt_verlauf.Text = Volt_verlauf.Text + "  ";
+                    }else {
+                        Volt_verlauf.Text = Volt_verlauf.Text + gArray[y, x] + " ";
+                    }
                 }
-                Volt_verlauf.Text += "\r\n";
+                Volt_verlauf.Text = Volt_verlauf.Text + "\r\n";
             }
         }
 
+        void array_clean() { 
+            
+        }
+
         void arrayeintrag(int position) {
-            gArray[positiona,position] = '*';
+
+            if (positiona == 16) {
+                positiona = 0;
+                array_clean();
+            }
+
+            gArray[position, positiona] = '*';
             positiona++;
         }
 
@@ -67,8 +85,9 @@ namespace da_wandler {
         private void einsetzen() {
             ausgabe_bin_box.Text = outbin;
             ausgabe_vol_box.Text = outvol;
-            arrayeintrag(Convert.ToInt32(invol));
-            wertausgabe();
+            arrayeintrag(Convert.ToInt32(invol)); //Array an stelle vol setzen
+            wertausgabe(); //Array ausgeben
+            Bin_verlauf.Text += "\r\n" + outbin;
         }
 
 
