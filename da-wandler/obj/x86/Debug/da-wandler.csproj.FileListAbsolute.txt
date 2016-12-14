@@ -1,0 +1,9 @@
+J:\da-wandler\da-wandler\bin\Debug\da-wandler.exe
+J:\da-wandler\da-wandler\bin\Debug\da-wandler.pdb
+J:\da-wandler\da-wandler\obj\x86\Debug\ResolveAssemblyReference.cache
+J:\da-wandler\da-wandler\obj\x86\Debug\da_wandler.Form1.resources
+J:\da-wandler\da-wandler\obj\x86\Debug\da_wandler.Properties.Resources.resources
+J:\da-wandler\da-wandler\obj\x86\Debug\GenerateResource.read.1.tlog
+J:\da-wandler\da-wandler\obj\x86\Debug\GenerateResource.write.1.tlog
+J:\da-wandler\da-wandler\obj\x86\Debug\da-wandler.exe
+J:\da-wandler\da-wandler\obj\x86\Debug\da-wandler.pdb
