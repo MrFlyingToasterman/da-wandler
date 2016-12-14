@@ -30,7 +30,6 @@
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -39,25 +38,26 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.gAusgabe_box = new System.Windows.Forms.TextBox();
+            this.eingabe_bin_box = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.eingabe_vol_box = new System.Windows.Forms.TextBox();
+            this.ausgabe_bin_box = new System.Windows.Forms.TextBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.ausgabe_vol_box = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox5.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.eingabe_bin_box);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(200, 100);
@@ -68,7 +68,7 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.button2);
-            this.groupBox2.Controls.Add(this.textBox3);
+            this.groupBox2.Controls.Add(this.eingabe_vol_box);
             this.groupBox2.Location = new System.Drawing.Point(12, 118);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(200, 100);
@@ -76,19 +76,9 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Eingabe Volt";
             // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.textBox5);
-            this.groupBox3.Location = new System.Drawing.Point(486, 118);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(200, 100);
-            this.groupBox3.TabIndex = 3;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Ausgabe Volt";
-            // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.textBox4);
+            this.groupBox4.Controls.Add(this.ausgabe_bin_box);
             this.groupBox4.Location = new System.Drawing.Point(486, 12);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(200, 100);
@@ -157,7 +147,7 @@
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.textBox1);
+            this.groupBox5.Controls.Add(this.gAusgabe_box);
             this.groupBox5.Location = new System.Drawing.Point(12, 224);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(674, 191);
@@ -165,24 +155,24 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Ausgabe";
             // 
-            // textBox1
+            // gAusgabe_box
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.textBox1.Font = new System.Drawing.Font("Courier New", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.Chartreuse;
-            this.textBox1.Location = new System.Drawing.Point(6, 19);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(662, 166);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.Text = "Warte auf eingabe...";
+            this.gAusgabe_box.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.gAusgabe_box.Font = new System.Drawing.Font("Courier New", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gAusgabe_box.ForeColor = System.Drawing.Color.Chartreuse;
+            this.gAusgabe_box.Location = new System.Drawing.Point(6, 19);
+            this.gAusgabe_box.Multiline = true;
+            this.gAusgabe_box.Name = "gAusgabe_box";
+            this.gAusgabe_box.Size = new System.Drawing.Size(662, 166);
+            this.gAusgabe_box.TabIndex = 0;
+            this.gAusgabe_box.Text = "Warte auf eingabe...";
             // 
-            // textBox2
+            // eingabe_bin_box
             // 
-            this.textBox2.Location = new System.Drawing.Point(6, 19);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(188, 20);
-            this.textBox2.TabIndex = 1;
+            this.eingabe_bin_box.Location = new System.Drawing.Point(6, 19);
+            this.eingabe_bin_box.Name = "eingabe_bin_box";
+            this.eingabe_bin_box.Size = new System.Drawing.Size(188, 20);
+            this.eingabe_bin_box.TabIndex = 1;
             // 
             // button1
             // 
@@ -202,28 +192,40 @@
             this.button2.Text = "Wandeln";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // textBox3
+            // eingabe_vol_box
             // 
-            this.textBox3.Location = new System.Drawing.Point(6, 19);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(188, 20);
-            this.textBox3.TabIndex = 11;
+            this.eingabe_vol_box.Location = new System.Drawing.Point(6, 19);
+            this.eingabe_vol_box.Name = "eingabe_vol_box";
+            this.eingabe_vol_box.Size = new System.Drawing.Size(188, 20);
+            this.eingabe_vol_box.TabIndex = 11;
             // 
-            // textBox5
+            // ausgabe_bin_box
             // 
-            this.textBox5.Location = new System.Drawing.Point(6, 19);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(188, 75);
-            this.textBox5.TabIndex = 11;
+            this.ausgabe_bin_box.Font = new System.Drawing.Font("Microsoft Sans Serif", 42F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ausgabe_bin_box.Location = new System.Drawing.Point(6, 19);
+            this.ausgabe_bin_box.Multiline = true;
+            this.ausgabe_bin_box.Name = "ausgabe_bin_box";
+            this.ausgabe_bin_box.Size = new System.Drawing.Size(188, 75);
+            this.ausgabe_bin_box.TabIndex = 12;
             // 
-            // textBox4
+            // groupBox3
             // 
-            this.textBox4.Location = new System.Drawing.Point(6, 19);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(188, 75);
-            this.textBox4.TabIndex = 12;
+            this.groupBox3.Controls.Add(this.ausgabe_vol_box);
+            this.groupBox3.Location = new System.Drawing.Point(486, 118);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(200, 100);
+            this.groupBox3.TabIndex = 3;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Ausgabe Volt";
+            // 
+            // ausgabe_vol_box
+            // 
+            this.ausgabe_vol_box.Font = new System.Drawing.Font("Microsoft Sans Serif", 42F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ausgabe_vol_box.Location = new System.Drawing.Point(6, 19);
+            this.ausgabe_vol_box.Multiline = true;
+            this.ausgabe_vol_box.Name = "ausgabe_vol_box";
+            this.ausgabe_vol_box.Size = new System.Drawing.Size(188, 75);
+            this.ausgabe_vol_box.TabIndex = 13;
             // 
             // Form1
             // 
@@ -246,14 +248,14 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -263,7 +265,6 @@
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
@@ -272,13 +273,14 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox gAusgabe_box;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox eingabe_bin_box;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox eingabe_vol_box;
+        private System.Windows.Forms.TextBox ausgabe_bin_box;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.TextBox ausgabe_vol_box;
     }
 }
 
