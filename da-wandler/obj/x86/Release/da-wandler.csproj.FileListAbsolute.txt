@@ -7,3 +7,5 @@ C:\cygwin64\home\neo\git\da-wandler\da-wandler\obj\x86\Release\GenerateResource.
 C:\cygwin64\home\neo\git\da-wandler\da-wandler\obj\x86\Release\GenerateResource.write.1.tlog
 C:\cygwin64\home\neo\git\da-wandler\da-wandler\obj\x86\Release\da-wandler.exe
 C:\cygwin64\home\neo\git\da-wandler\da-wandler\obj\x86\Release\da-wandler.pdb
+J:\da-wandler\da-wandler\obj\x86\Release\da-wandler.exe
+J:\da-wandler\da-wandler\obj\x86\Release\da-wandler.pdb
