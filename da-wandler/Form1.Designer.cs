@@ -43,10 +43,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.Bin_verlauf = new System.Windows.Forms.TextBox();
             this.Volt_verlauf = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.ausgabe_vol_box = new System.Windows.Forms.TextBox();
-            this.Bin_verlauf = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -74,10 +74,12 @@
             this.button1.TabIndex = 10;
             this.button1.Text = "Wandeln";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // eingabe_bin_box
             // 
             this.eingabe_bin_box.Location = new System.Drawing.Point(6, 19);
+            this.eingabe_bin_box.MaxLength = 4;
             this.eingabe_bin_box.Name = "eingabe_bin_box";
             this.eingabe_bin_box.Size = new System.Drawing.Size(188, 20);
             this.eingabe_bin_box.TabIndex = 1;
@@ -101,17 +103,19 @@
             this.button2.TabIndex = 12;
             this.button2.Text = "Wandeln";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // eingabe_vol_box
             // 
             this.eingabe_vol_box.Location = new System.Drawing.Point(6, 19);
+            this.eingabe_vol_box.MaxLength = 2;
             this.eingabe_vol_box.Name = "eingabe_vol_box";
             this.eingabe_vol_box.Size = new System.Drawing.Size(188, 20);
             this.eingabe_vol_box.TabIndex = 11;
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.ausgabe_bin_box);
+            this.groupBox4.Controls.Add(this.ausgabe_vol_box);
             this.groupBox4.Location = new System.Drawing.Point(486, 12);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(200, 100);
@@ -198,6 +202,18 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Verlauf";
             // 
+            // Bin_verlauf
+            // 
+            this.Bin_verlauf.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.Bin_verlauf.Font = new System.Drawing.Font("Courier New", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Bin_verlauf.ForeColor = System.Drawing.Color.Chartreuse;
+            this.Bin_verlauf.Location = new System.Drawing.Point(339, 19);
+            this.Bin_verlauf.Multiline = true;
+            this.Bin_verlauf.Name = "Bin_verlauf";
+            this.Bin_verlauf.Size = new System.Drawing.Size(329, 166);
+            this.Bin_verlauf.TabIndex = 1;
+            this.Bin_verlauf.Text = "Warte auf eingabe...";
+            // 
             // Volt_verlauf
             // 
             this.Volt_verlauf.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
@@ -212,7 +228,7 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.ausgabe_vol_box);
+            this.groupBox3.Controls.Add(this.ausgabe_bin_box);
             this.groupBox3.Location = new System.Drawing.Point(486, 118);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(200, 100);
@@ -228,18 +244,6 @@
             this.ausgabe_vol_box.Name = "ausgabe_vol_box";
             this.ausgabe_vol_box.Size = new System.Drawing.Size(188, 75);
             this.ausgabe_vol_box.TabIndex = 13;
-            // 
-            // Bin_verlauf
-            // 
-            this.Bin_verlauf.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.Bin_verlauf.Font = new System.Drawing.Font("Courier New", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Bin_verlauf.ForeColor = System.Drawing.Color.Chartreuse;
-            this.Bin_verlauf.Location = new System.Drawing.Point(339, 19);
-            this.Bin_verlauf.Multiline = true;
-            this.Bin_verlauf.Name = "Bin_verlauf";
-            this.Bin_verlauf.Size = new System.Drawing.Size(329, 166);
-            this.Bin_verlauf.TabIndex = 1;
-            this.Bin_verlauf.Text = "Warte auf eingabe...";
             // 
             // Form1
             // 
