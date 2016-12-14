@@ -219,6 +219,7 @@
             this.Bin_verlauf.Location = new System.Drawing.Point(339, 20);
             this.Bin_verlauf.Multiline = true;
             this.Bin_verlauf.Name = "Bin_verlauf";
+            this.Bin_verlauf.ReadOnly = true;
             this.Bin_verlauf.Size = new System.Drawing.Size(329, 167);
             this.Bin_verlauf.TabIndex = 1;
             this.Bin_verlauf.Text = "Warte auf eingabe...";
@@ -231,9 +232,10 @@
             this.Volt_verlauf.Location = new System.Drawing.Point(6, 20);
             this.Volt_verlauf.Multiline = true;
             this.Volt_verlauf.Name = "Volt_verlauf";
+            this.Volt_verlauf.ReadOnly = true;
             this.Volt_verlauf.Size = new System.Drawing.Size(329, 167);
             this.Volt_verlauf.TabIndex = 0;
-            this.Volt_verlauf.Text = "Warte auf eingabe...\r\n2\r\n3\r\n4\r\n5\r\n6\r\n7\r\n8\r\n9\r\n10\r\n11\r\n12\r\n13\r\n14\r\n15\r\n16";
+            this.Volt_verlauf.Text = "Warte auf eingabe...";
             // 
             // groupBox3
             // 
@@ -260,6 +262,7 @@
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
             this.Text = "DA Wandler";
             this.groupBox1.ResumeLayout(false);

@@ -43,11 +43,16 @@ namespace da_wandler {
             }
         }
 
+        void binverlauf_clear() {
+            Bin_verlauf.Text = "";
+        }
+
         void arrayeintrag(int position) {
 
             if (positiona > 15) {
                 positiona = 0;
                 array_clean();
+                binverlauf_clear();
             }
 
             gArray[position, positiona] = '*';
@@ -104,6 +109,8 @@ namespace da_wandler {
             arrayeintrag(Convert.ToInt32(invol)); //Array an stelle vol setzen
             wertausgabe(); //Array ausgeben
             Bin_verlauf.Text += "\r\n" + outbin;
+            Bin_verlauf.SelectionStart = Bin_verlauf.Text.Length;
+            Bin_verlauf.ScrollToCaret();
         }
 
         private string DezToBin(string dez) {
