@@ -1,0 +1,9 @@
+C:\cygwin64\home\neo\git\da-wandler\da-wandler\bin\Release\da-wandler.exe
+C:\cygwin64\home\neo\git\da-wandler\da-wandler\bin\Release\da-wandler.pdb
+C:\cygwin64\home\neo\git\da-wandler\da-wandler\obj\x86\Release\ResolveAssemblyReference.cache
+C:\cygwin64\home\neo\git\da-wandler\da-wandler\obj\x86\Release\da_wandler.Form1.resources
+C:\cygwin64\home\neo\git\da-wandler\da-wandler\obj\x86\Release\da_wandler.Properties.Resources.resources
+C:\cygwin64\home\neo\git\da-wandler\da-wandler\obj\x86\Release\GenerateResource.read.1.tlog
+C:\cygwin64\home\neo\git\da-wandler\da-wandler\obj\x86\Release\GenerateResource.write.1.tlog
+C:\cygwin64\home\neo\git\da-wandler\da-wandler\obj\x86\Release\da-wandler.exe
+C:\cygwin64\home\neo\git\da-wandler\da-wandler\obj\x86\Release\da-wandler.pdb

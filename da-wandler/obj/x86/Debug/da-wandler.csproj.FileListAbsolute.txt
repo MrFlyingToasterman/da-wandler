@@ -7,3 +7,5 @@ J:\da-wandler\da-wandler\obj\x86\Debug\GenerateResource.read.1.tlog
 J:\da-wandler\da-wandler\obj\x86\Debug\GenerateResource.write.1.tlog
 J:\da-wandler\da-wandler\obj\x86\Debug\da-wandler.exe
 J:\da-wandler\da-wandler\obj\x86\Debug\da-wandler.pdb
+C:\cygwin64\home\neo\git\da-wandler\da-wandler\obj\x86\Debug\da-wandler.exe
+C:\cygwin64\home\neo\git\da-wandler\da-wandler\obj\x86\Debug\da-wandler.pdb

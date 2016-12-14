@@ -29,23 +29,24 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.eingabe_bin_box = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.eingabe_vol_box = new System.Windows.Forms.TextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.ausgabe_bin_box = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.gAusgabe_box = new System.Windows.Forms.TextBox();
-            this.eingabe_bin_box = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.eingabe_vol_box = new System.Windows.Forms.TextBox();
-            this.ausgabe_bin_box = new System.Windows.Forms.TextBox();
+            this.Volt_verlauf = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.ausgabe_vol_box = new System.Windows.Forms.TextBox();
+            this.Bin_verlauf = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -65,6 +66,22 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Eingabe Binär";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(119, 45);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "Wandeln";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // eingabe_bin_box
+            // 
+            this.eingabe_bin_box.Location = new System.Drawing.Point(6, 19);
+            this.eingabe_bin_box.Name = "eingabe_bin_box";
+            this.eingabe_bin_box.Size = new System.Drawing.Size(188, 20);
+            this.eingabe_bin_box.TabIndex = 1;
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.button2);
@@ -76,6 +93,22 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Eingabe Volt";
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(119, 45);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 12;
+            this.button2.Text = "Wandeln";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // eingabe_vol_box
+            // 
+            this.eingabe_vol_box.Location = new System.Drawing.Point(6, 19);
+            this.eingabe_vol_box.Name = "eingabe_vol_box";
+            this.eingabe_vol_box.Size = new System.Drawing.Size(188, 20);
+            this.eingabe_vol_box.TabIndex = 11;
+            // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.ausgabe_bin_box);
@@ -84,7 +117,16 @@
             this.groupBox4.Size = new System.Drawing.Size(200, 100);
             this.groupBox4.TabIndex = 2;
             this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Ausgabe Binär";
+            this.groupBox4.Text = "Ausgabe Volt";
+            // 
+            // ausgabe_bin_box
+            // 
+            this.ausgabe_bin_box.Font = new System.Drawing.Font("Microsoft Sans Serif", 42F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ausgabe_bin_box.Location = new System.Drawing.Point(6, 19);
+            this.ausgabe_bin_box.Multiline = true;
+            this.ausgabe_bin_box.Name = "ausgabe_bin_box";
+            this.ausgabe_bin_box.Size = new System.Drawing.Size(188, 75);
+            this.ausgabe_bin_box.TabIndex = 12;
             // 
             // panel1
             // 
@@ -94,6 +136,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(150, 150);
             this.panel1.TabIndex = 4;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(-1, 54);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(151, 48);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Digital / Analog\r\n     Wandler";
             // 
             // label1
             // 
@@ -135,78 +187,28 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "-->";
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(-1, 54);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(151, 48);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Digital / Analog\r\n     Wandler";
-            // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.gAusgabe_box);
+            this.groupBox5.Controls.Add(this.Bin_verlauf);
+            this.groupBox5.Controls.Add(this.Volt_verlauf);
             this.groupBox5.Location = new System.Drawing.Point(12, 224);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(674, 191);
             this.groupBox5.TabIndex = 9;
             this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Ausgabe";
+            this.groupBox5.Text = "Verlauf";
             // 
-            // gAusgabe_box
+            // Volt_verlauf
             // 
-            this.gAusgabe_box.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.gAusgabe_box.Font = new System.Drawing.Font("Courier New", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gAusgabe_box.ForeColor = System.Drawing.Color.Chartreuse;
-            this.gAusgabe_box.Location = new System.Drawing.Point(6, 19);
-            this.gAusgabe_box.Multiline = true;
-            this.gAusgabe_box.Name = "gAusgabe_box";
-            this.gAusgabe_box.Size = new System.Drawing.Size(662, 166);
-            this.gAusgabe_box.TabIndex = 0;
-            this.gAusgabe_box.Text = "Warte auf eingabe...";
-            // 
-            // eingabe_bin_box
-            // 
-            this.eingabe_bin_box.Location = new System.Drawing.Point(6, 19);
-            this.eingabe_bin_box.Name = "eingabe_bin_box";
-            this.eingabe_bin_box.Size = new System.Drawing.Size(188, 20);
-            this.eingabe_bin_box.TabIndex = 1;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(119, 45);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Wandeln";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(119, 45);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 12;
-            this.button2.Text = "Wandeln";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // eingabe_vol_box
-            // 
-            this.eingabe_vol_box.Location = new System.Drawing.Point(6, 19);
-            this.eingabe_vol_box.Name = "eingabe_vol_box";
-            this.eingabe_vol_box.Size = new System.Drawing.Size(188, 20);
-            this.eingabe_vol_box.TabIndex = 11;
-            // 
-            // ausgabe_bin_box
-            // 
-            this.ausgabe_bin_box.Font = new System.Drawing.Font("Microsoft Sans Serif", 42F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ausgabe_bin_box.Location = new System.Drawing.Point(6, 19);
-            this.ausgabe_bin_box.Multiline = true;
-            this.ausgabe_bin_box.Name = "ausgabe_bin_box";
-            this.ausgabe_bin_box.Size = new System.Drawing.Size(188, 75);
-            this.ausgabe_bin_box.TabIndex = 12;
+            this.Volt_verlauf.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.Volt_verlauf.Font = new System.Drawing.Font("Courier New", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Volt_verlauf.ForeColor = System.Drawing.Color.Chartreuse;
+            this.Volt_verlauf.Location = new System.Drawing.Point(6, 19);
+            this.Volt_verlauf.Multiline = true;
+            this.Volt_verlauf.Name = "Volt_verlauf";
+            this.Volt_verlauf.Size = new System.Drawing.Size(329, 166);
+            this.Volt_verlauf.TabIndex = 0;
+            this.Volt_verlauf.Text = "Warte auf eingabe...";
             // 
             // groupBox3
             // 
@@ -216,7 +218,7 @@
             this.groupBox3.Size = new System.Drawing.Size(200, 100);
             this.groupBox3.TabIndex = 3;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Ausgabe Volt";
+            this.groupBox3.Text = "Ausgabe Binär";
             // 
             // ausgabe_vol_box
             // 
@@ -226,6 +228,18 @@
             this.ausgabe_vol_box.Name = "ausgabe_vol_box";
             this.ausgabe_vol_box.Size = new System.Drawing.Size(188, 75);
             this.ausgabe_vol_box.TabIndex = 13;
+            // 
+            // Bin_verlauf
+            // 
+            this.Bin_verlauf.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.Bin_verlauf.Font = new System.Drawing.Font("Courier New", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Bin_verlauf.ForeColor = System.Drawing.Color.Chartreuse;
+            this.Bin_verlauf.Location = new System.Drawing.Point(339, 19);
+            this.Bin_verlauf.Multiline = true;
+            this.Bin_verlauf.Name = "Bin_verlauf";
+            this.Bin_verlauf.Size = new System.Drawing.Size(329, 166);
+            this.Bin_verlauf.TabIndex = 1;
+            this.Bin_verlauf.Text = "Warte auf eingabe...";
             // 
             // Form1
             // 
@@ -273,7 +287,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.TextBox gAusgabe_box;
+        private System.Windows.Forms.TextBox Volt_verlauf;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox eingabe_bin_box;
         private System.Windows.Forms.Button button2;
@@ -281,6 +295,7 @@
         private System.Windows.Forms.TextBox ausgabe_bin_box;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.TextBox ausgabe_vol_box;
+        private System.Windows.Forms.TextBox Bin_verlauf;
     }
 }
 
