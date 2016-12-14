@@ -35,13 +35,17 @@ namespace da_wandler {
             }
         }
 
-        void array_clean() { 
-            
+        void array_clean() {
+            for (int y = 0; y < 16; y++) {
+                for (int x = 0; x < 16; x++) {
+                    gArray[y, x] = '\0';
+                }
+            }
         }
 
         void arrayeintrag(int position) {
 
-            if (positiona == 16) {
+            if (positiona > 15) {
                 positiona = 0;
                 array_clean();
             }
@@ -73,21 +77,37 @@ namespace da_wandler {
 
         private void button1_Click(object sender, EventArgs e) {
             inbin = eingabe_bin_box.Text;
+            outvol = DezToBin(inbin);
+            invol = outvol;
+            outbin = inbin;
+            invol = outvol;
+            einsetzen();
         }
 
         private void button2_Click(object sender, EventArgs e) {
             invol = eingabe_vol_box.Text;
-            outbin = tobin(Convert.ToInt32(invol));
-            inbin = outbin;
-            einsetzen();
+            if (Convert.ToInt32(invol) < 16) {
+                outbin = tobin(Convert.ToInt32(invol));
+                inbin = outbin;
+                outvol = invol;
+                einsetzen();
+            } else {
+                MessageBox.Show("Bitte maximal 15 Volt Spannung anlegen.");
+            }
         }
 
         private void einsetzen() {
+            eingabe_bin_box.Text = inbin;
+            eingabe_vol_box.Text = invol;
             ausgabe_bin_box.Text = outbin;
             ausgabe_vol_box.Text = outvol;
             arrayeintrag(Convert.ToInt32(invol)); //Array an stelle vol setzen
             wertausgabe(); //Array ausgeben
             Bin_verlauf.Text += "\r\n" + outbin;
+        }
+
+        private string DezToBin(string dez) {
+            return Convert.ToInt32(dez, 2).ToString();
         }
 
 
