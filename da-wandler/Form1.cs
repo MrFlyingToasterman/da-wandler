@@ -21,14 +21,15 @@ namespace da_wandler {
         void wertausgabe() {
             for (int y = 0; y < gArray.GetLength(0); y++) {
                 for (int x = 0; x < gArray.GetLength(1); x++) {
-                    Volt_verlauf.Text = Convert.ToString(gArray[x, y]);
+                    Volt_verlauf.Text = "" + gArray[y,x];
                 }
+                Volt_verlauf.Text += "\r\n";
             }
         }
 
         void arrayeintrag(int position) {
-            gArray[position,position] = '*';
-            position++;
+            gArray[positiona,position] = '*';
+            positiona++;
         }
 
 
@@ -66,6 +67,8 @@ namespace da_wandler {
         private void einsetzen() {
             ausgabe_bin_box.Text = outbin;
             ausgabe_vol_box.Text = outvol;
+            arrayeintrag(Convert.ToInt32(invol));
+            wertausgabe();
         }
 
 
